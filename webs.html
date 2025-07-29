@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet" />
+    <title>Tanya Panse</title>
+</head>
+
+<body>
+
+    <!-- 🔝 NAVBAR -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="apps.html">Apps</a></li>
+            <li><a href="webs.html" class="active">Web Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-webs">
+        <h1 class="title">My Projects</h1>
+        <div class="projects-section">
+            <div class="projects">
+                <div class="projectrow">
+                    <div class="project">
+                        <h2>Music Player</h2>
+                        <div class="description">
+                            <p class="desc">HTML</p>
+                            <p class="desc">CSS</p>
+                            <p class="desc">JavaScript</p>
+                            <p class="desc">Node.js</p>
+                        </div>
+                        <img class="cover" src="musicplayer.png" />
+                        <div class="buttons">
+                            <button class="viewdetails" data-widget="music-player">
+                                <img src="tryme.PNG" />
+                            </button>
+                            <a href="https://github.com/tanyapanse/Music-Player">
+                                <button class="github-link">
+                                    <img src="viewdetails2.png" />
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h2>Cozy Cafe</h2>
+                        <div class="description">
+                            <p class="desc">HTML</p>
+                            <p class="desc">CSS</p>
+                            <p class="desc">JavaScript</p>
+                            <p class="desc">Open-Meteo API</p>
+                        </div>
+                        <img class="cover" src="cozycafe.png" />
+                        <div class="buttons">
+                            <button class="viewdetails" data-widget="cozy-cafe">
+                                <img src="tryme.PNG" />
+                            </button>
+                            <a href="https://github.com/tanyapanse/Cozy-Cafe">
+                                <button class="github-link">
+                                    <img src="viewdetails2.png" />
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h2>Miffy Fits</h2>
+                        <div class="description">
+                            <p class="desc">HTML</p>
+                            <p class="desc">CSS</p>
+                            <p class="desc">JavaScript</p>
+                            <p class="desc">Node.js</p>
+                        </div>
+                        <img class="cover" src="miffyfits.png" />
+                        <div class="buttons">
+                            <button class="viewdetails" data-widget="miffy-fits">
+                                <img src="tryme.PNG" />
+                            </button>
+                            <a href="https://github.com/tanyapanse/Miffy-Fits">
+                                <button class="github-link">
+                                    <img src="viewdetails2.png" />
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="projectrow">
+                    <div class="project">
+                        <h2>To-Do List</h2>
+                        <div class="description">
+                            <p class="desc">HTML</p>
+                            <p class="desc">CSS</p>
+                            <p class="desc">JavaScript</p>
+                            <p class="desc">Node.js</p>
+                        </div>
+                        <img class="cover" src="todolist.png" />
+                        <div class="buttons">
+                            <button class="viewdetails" data-widget="to-do">
+                                <img src="tryme.PNG" />
+                            </button>
+                            <a href="https://github.com/tanyapanse/To-Do-List">
+                                <button class="github-link">
+                                    <img src="viewdetails2.png" />
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h2>PomoSmiski</h2>
+                        <div class="description">
+                            <p class="desc">HTML</p>
+                            <p class="desc">CSS</p>
+                            <p class="desc">JavaScript</p>
+                            <p class="desc">React</p>
+                        </div>
+                        <img class="cover" src="pomosmiski.png" />
+                        <div class="buttons">
+                            <a href="https://tanyapanse.github.io/PomoSmiski/">
+                                <button class="viewdetails">
+                                    <img src="tryme.PNG" />
+                                </button>
+                            </a>
+                            <a href="https://github.com/tanyapanse/PomoSmiski">
+                                <button class="github-link">
+                                    <img src="viewdetails2.png" />
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h2>Weather Watch</h2>
+                        <div class="description">
+                            <p class="desc">HTML</p>
+                            <p class="desc">CSS</p>
+                            <p class="desc">JavaScript</p>
+                            <p class="desc">Open-Meteo API</p>
+                        </div>
+                        <img class="cover" src="weatherwatch.png" />
+                        <div class="buttons">
+                            <button class="viewdetails" data-widget="weather-watch">
+                                <img src="tryme.PNG" />
+                            </button>
+                            <a href="https://github.com/tanyapanse/Weather-Watch">
+                                <button class="github-link">
+                                    <img src="viewdetails2.png" />
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="widgetModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="widgetFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <audio id="clickSound" src="click-sound.mp3" preload="auto"></audio>
+
+    <script>
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const images = carousel.querySelectorAll('img');
+            const prevBtn = carousel.querySelector('.prev');
+            const nextBtn = carousel.querySelector('.next');
+            let current = 0;
+
+            function showImage(index) {
+                images.forEach(img => img.classList.remove('active'));
+                images[index].classList.add('active');
+            }
+
+            prevBtn.addEventListener('click', () => {
+                current = (current === 0) ? images.length - 1 : current - 1;
+                showImage(current);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                current = (current === images.length - 1) ? 0 : current + 1;
+                showImage(current);
+            });
+        });
+
+        //pop-up
+        const modal = document.getElementById('widgetModal');
+        const widgetFrame = document.getElementById('widgetFrame');
+        const closeBtn = document.querySelector('.close');
+
+        // Open modal when "view details" button clicked
+        document.querySelectorAll('.viewdetails').forEach(button => {
+            button.addEventListener('click', () => {
+                const widgetName = button.dataset.widget;
+                widgetFrame.src = `/widgets/${widgetName}`;
+                modal.style.display = 'flex';
+            });
+        });
+
+        // Close modal when "X" clicked
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            widgetFrame.src = ''; // clears iframe when closed
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                widgetFrame.src = '';
+            }
+        });
+
+        const clickSound = document.getElementById('clickSound');
+
+        // 🎵 Attach to ALL buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                clickSound.currentTime = 0;  // rewind to start in case it’s still playing
+                clickSound.play();
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

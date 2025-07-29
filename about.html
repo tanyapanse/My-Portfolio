@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet" />
+    <title>Tanya Panse</title>
+</head>
+
+<body>
+
+    <!-- 🔝 NAVBAR -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="apps.html">Apps</a></li>
+            <li><a href="webs.html">Web Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-about">
+        <div class="about">
+            <h1 class="about-title">About Me!</h1>
+            <p>
+                Hi! My name is Tanya, and I'm a Grade 12 student at St. Marcellinus
+                Secondary School with a passion for coding and graphic design. I have
+                experience building web applications using HTML, CSS, and JavaScript,
+                and I'm also familiar with Python and Java. Currently, I'm learning
+                Unity to expand my skills in game development. I’m excited to apply my
+                skills in real-world settings and am looking for internships or
+                volunteer opportunities that will help me grow as a future software
+                engineer.
+            </p>
+        </div>
+        <div class="resume">
+            <img class="resume-img" src="resume.png">
+        </div>
+    </div>
+
+    <audio id="clickSound" src="click-sound.mp3" preload="auto"></audio>
+
+    <script>
+
+        const clickSound = document.getElementById('clickSound');
+
+        // 🎵 Attach to ALL buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                clickSound.currentTime = 0;  // rewind to start in case it’s still playing
+                clickSound.play();
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

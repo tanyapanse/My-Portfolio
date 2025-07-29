@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet" />
+  <title>Tanya Panse</title>
+</head>
+
+<body>
+
+  <!-- 🔝 NAVBAR -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="apps.html">Apps</a></li>
+      <li><a href="webs.html">Web Projects</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="greeting">
+        <h1>Hello,</h1>
+        <h1 class="pink">I'm Tanya</h1>
+        <div class="link-buttons">
+          <a href="https://www.linkedin.com/in/tanyapanse/">
+            <button class="circle-button">
+              <img src="linkedin.png" />
+            </button>
+          </a>
+          <a href="https://github.com/tanyapanse">
+            <button class="circle-button">
+              <img src="github.png" />
+            </button>
+          </a>
+          <a href="mailto:tanyapanse11@gmail.com">
+            <button class="circle-button">
+              <img src="email.png" />
+            </button>
+          </a>
+        </div>
+      </div>
+      <img src="pfp.jpg" class="pfp" />
+    </div>
+  </div>
+
+  <audio id="clickSound" src="click-sound.mp3" preload="auto"></audio>
+
+  <script>
+    const clickSound = document.getElementById('clickSound');
+
+    document.querySelectorAll('button, a').forEach(el => {
+      el.addEventListener('click', (e) => {
+        clickSound.currentTime = 0;
+        clickSound.play();
+
+        const isLink = el.tagName.toLowerCase() === 'a';
+        const wrappedLink = el.closest('a');
+        const href = el.getAttribute('href') || wrappedLink?.getAttribute('href');
+
+        if (isLink || wrappedLink) {
+          e.preventDefault();
+          setTimeout(() => {
+            if (href) window.location.href = href;
+          }, 150); // delay navigation slightly for click sound
+        }
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

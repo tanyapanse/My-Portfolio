@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet" />
+    <title>Tanya Panse</title>
+</head>
+
+<body>
+
+    <!-- 🔝 NAVBAR -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="apps.html" class="active">Apps</a></li>
+            <li><a href="webs.html">Web Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h1 class="featured-title">Mobile Apps</h1>
+        <div class="featured-section">
+
+            <div class="featured">
+                <img class="screen" src="pocketace1.png" alt="Pocket Ace Screenshot">
+                <div class="blurb">
+                    <h2>Pocket Ace</h2>
+                    <div class="description">
+                        <p class="desc">Figma</p>
+                        <p class="desc">Swift</p>
+                        <p class="desc">SwiftUI</p>
+                    </div>
+                    <p>
+                        Pocket Ace is a multifunctional budgeting app infused with Artificial Intelligence made for
+                        students,
+                        by students. Pocket Ace considers all the gray areas and misconceptions a student may have when
+                        budgeting, such as tuition, housing and transportation. Pocket Ace stands out as it directly
+                        partners with universities across Ontario to deliver the most accurate information to
+                        students. Pocket Ace has the potential to fill a gap that will lead students into a more
+                        financially secure position as they
+                        go to university.
+                    </p>
+                </div>
+            </div>
+
+            <div class="featured">
+                <img class="screen" src="herpath1.png" alt="Her Path Screenshot">
+                <div class="blurb">
+                    <h2>Her Path</h2>
+                    <div class="description">
+                        <p class="desc">Figma</p>
+                        <p class="desc">Swift</p>
+                        <p class="desc">SwiftUI</p>
+                    </div>
+                    <p>
+                        Her Path is an educational platform designed to close the gender gap in STEM. Her Path aims to
+                        give girls aged 13-18 years old the tools to explore STEM subjects, lead and join clubs, and
+                        host events. By offering interactive lessons, resources, and access to scholarships, Her Path
+                        builds confidence, hands-on skills, and a community where every girl can see her future in STEM.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <audio id="clickSound" src="click-sound.mp3" preload="auto"></audio>
+
+    <script>
+        const clickSound = document.getElementById('clickSound');
+
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('click', (e) => {
+                clickSound.currentTime = 0;
+                clickSound.play();
+
+                const isLink = el.tagName.toLowerCase() === 'a';
+                const wrappedLink = el.closest('a');
+                const href = el.getAttribute('href') || wrappedLink?.getAttribute('href');
+
+                if (isLink || wrappedLink) {
+                    e.preventDefault();
+                    setTimeout(() => {
+                        if (href) window.location.href = href;
+                    }, 150);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
